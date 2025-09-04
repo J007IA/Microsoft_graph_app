@@ -26,6 +26,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code and Makefile
 COPY . .
 
+# Debug: List files to verify Makefile is present
+RUN ls -la /app/
+
 # Create non-root user to run the application
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
 USER appuser

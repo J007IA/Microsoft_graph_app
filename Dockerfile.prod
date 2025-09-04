@@ -46,6 +46,9 @@ COPY src/ ./src/
 COPY run.py .
 COPY Makefile .
 
+# Debug: Verify files are present
+RUN ls -la /app/
+
 # Create non-root user
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
 USER appuser

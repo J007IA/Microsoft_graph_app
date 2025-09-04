@@ -60,7 +60,7 @@ Dockerfile
 docker-compose*.yml
 
 # Makefiles and scripts
-Makefile
+# Makefile - needed for Docker CMD
 
 # Logs
 *.log
